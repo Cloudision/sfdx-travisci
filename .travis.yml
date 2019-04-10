@@ -24,5 +24,7 @@ script:
   5
 - sfdx force:org:display -u ciorg
 - sfdx force:source:push -u ciorg
+- sfdx force:source:convert -u ciorg
 - sfdx force:apex:test:run -u ciorg --wait 10
+- sfdx force:mdapi:deploy -d deploy -u aasif.sfdc@gmail.com
 - sfdx force:org:delete -u ciorg -p
